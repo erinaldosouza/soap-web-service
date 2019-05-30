@@ -1,13 +1,32 @@
 package br.com.soap.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_user")
 public class User implements IModel<Long> {
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="last_name")
 	private String lastname;
+	
+	@Column(name="user_name")
 	private String username;
+	
+	@Column(name="password")
 	private String password;
 	
 	public String getName() {
