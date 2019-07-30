@@ -17,55 +17,55 @@ public class User implements IModel<Long> {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name="name")
+	@Column(name="user_name")
 	private String name;
 	
 	@Column(name="last_name")
-	private String lastname;
+	private String lastName;
 	
-	@Column(name="user_name")
-	private String username;
+	@Column(name="user_login")
+	private String userLogin;
 	
-	@Column(name="password")
+	@Column(name="user_password")
 	private String password;
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getLastname() {
-		return lastname;
-	}
-	
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-	
+
 	@Override
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	public String getUsername() {
-		return username;
+
+	public String getName() {
+		return name;
 	}
-	
-	public void setUsername(String username) {
-		this.username = username;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getUserLogin() {
+		return userLogin;
+	}
+
+	public void setUserLogin(String userLogin) {
+		this.userLogin = userLogin;
+	}
+
 	public String getPassword() {
 		return password;
 	}
-	
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
