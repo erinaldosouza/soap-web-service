@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_user", schema="public")
+@Table(name="tb_client", schema="monolithic")
 public class User implements IModel<Long> {
 
 	private static final long serialVersionUID = 1L;
@@ -17,16 +17,16 @@ public class User implements IModel<Long> {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name="user_name")
+	@Column(name="ds_name")
 	private String name;
 	
-	@Column(name="last_name")
+	@Column(name="ds_last_name")
 	private String lastName;
 	
-	@Column(name="user_login")
+	@Column(name="ds_login")
 	private String userLogin;
 	
-	@Column(name="user_password")
+	@Column(name="ds_password")
 	private String password;
 
 	@Override

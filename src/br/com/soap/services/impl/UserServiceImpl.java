@@ -23,7 +23,6 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public User read(Long id) {
-		System.out.println("read");
 		return dao.read(id);
 	}
 

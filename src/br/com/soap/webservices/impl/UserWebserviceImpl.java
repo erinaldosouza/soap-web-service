@@ -16,13 +16,13 @@ public class UserWebserviceImpl implements UserWebservice {
 	private IUserService userService;
 	
 	@Override
-	public User create(User user) {
-		return userService.create(user);
+	public void create(User user) {
+		userService.create(user);
 	}
 	
 	@Override
-	public void read(Long id) {
-		userService.read(id);
+	public User read(Long id) {
+		return userService.read(id);
 	}
 	
 	@Override

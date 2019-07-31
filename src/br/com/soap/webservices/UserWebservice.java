@@ -14,10 +14,10 @@ import br.com.soap.model.User;
 public interface UserWebservice {
 	
 	@WebMethod(operationName="create")
-	public User create(User user);
+	public void create(User user);
 	
 	@WebMethod(operationName="read")
-	public void read(Long id);
+	public User read(Long id);
 	
 	@WebMethod(operationName="update")
 	public void update(Long id, User user);

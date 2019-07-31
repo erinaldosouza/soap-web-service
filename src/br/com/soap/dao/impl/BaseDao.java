@@ -9,7 +9,7 @@ import br.com.soap.dao.IBaseDao;
 @Stateless
 public abstract class BaseDao<T, I> implements IBaseDao<T, I> {
 
-	@PersistenceContext(unitName="default")
+	@PersistenceContext(unitName="default-PU")
 	protected EntityManager entityManager;
 	
 	public BaseDao() {
